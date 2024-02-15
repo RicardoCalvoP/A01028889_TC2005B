@@ -24,42 +24,61 @@ A01028889_TC2005B
 
 ### **Terminal commands**
 
-    * 'pwd: ' gives you the direction you are in
+- `pwd`: gives you the direction you are in
 
-    * ls: list of files in current direction
-    * ls -a: shows hidden files in current direction
-    * ls <name of folder>: gives you list of file of the choosen file 
-    * cat <file name>: see file content
-    * cd: change direction forwards
-    * cd ..: change direction backwards
-    * mkdir <name of folder>: create a folder
-    * history: gives you the history of commands you have used
-    * touch <name of file>: create a new file, you can also create file if you are not in the folder by touch <folder/name>
-    * rm <name file>: remove file
-    * rm -r <name>: can remove files
-    * mv <name file, direction>: move file (can change name)
-    * nano <file name>: opens text editor to edit file
-    * code . : Opens VS Code
+- `ls`: list of files in current direction
+- `ls -a`: shows hidden files in current direction
+- `ls <name of folder>`: gives you list of file of the choosen file 
+
+- `cat <file name>`: see file content
+
+- `cd`: change direction forwards
+
+- `cd ..`: change direction backwards
+
+- `mkdir <name of folder>`: create a folder
+
+- `history`: gives you the history of commands you have used
+
+- `touch <name of file>`: create a new file, you can also create file if you are not in the folder by touch <folder/name>
+
+- `rm <name file>`: remove file
+
+- `rm -r <name>`: can remove files
+
+- `mv <name file, direction>`: move file (can change name)
+
+- `nano <file name>`: opens text editor to edit file
+
+- `code .` : Opens VS Code
 
 ---
 ### C++
 
-    * Create exe: g++ -o <name of exe> <name of file>.cpp
-    * To execute: ./<name of exe>
+
+- Create exe: `g++ -o <name of exe> <name of file>.cpp`
+
+- To execute: `./<name of exe>`
 
 ---
 ### Python 
 
-    * To run python file: Python <file name>.py
+
+- To run python file: `Python <file name>.py`
 
 ---
 ### Git 
 
-    * git status
-    * git add <file name>
-    * git commit -m "text"
-    * git push
-    * git pull
+
+- `git status`
+
+- `git add <file name>`
+
+- `git commit -m "text"`
+
+- `git push`
+
+- `git pull`
 
 ---
 
