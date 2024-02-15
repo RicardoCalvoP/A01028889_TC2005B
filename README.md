@@ -24,7 +24,7 @@ A01028889_TC2005B
 
 ### **Terminal commands**
 
-    *`pwd:`gives you the direction you are in
+    * 'pwd: ' gives you the direction you are in
 
     * ls: list of files in current direction
     * ls -a: shows hidden files in current direction
