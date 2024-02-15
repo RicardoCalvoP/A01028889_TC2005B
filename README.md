@@ -36,17 +36,18 @@ A01028889_TC2005B
     12 rm -r <name>: can remove files
     13. mv <name file, direction>: move file (can change name)
     14. nano <file name>: opens text editor to edit file
+    15. code . : Opens VS Code
 
 ---
 ### C++
 
-    15. Create exe: g++ -o <name of exe> <name of file>.cpp
-    16. To execute: ./<name of exe>
+    16. Create exe: g++ -o <name of exe> <name of file>.cpp
+    17. To execute: ./<name of exe>
 
 ---
 ### Python 
 
-    17. To run python file: Python <file name>.py
+    18. To run python file: Python <file name>.py
 
 
 ---
