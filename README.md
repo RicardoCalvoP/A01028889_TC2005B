@@ -49,6 +49,14 @@ A01028889_TC2005B
 
     18. To run python file: Python <file name>.py
 
+---
+### Git 
+
+    19. git status
+    20. git add <file name>
+    21. git commit -m "text"
+    22. git push
+    23. git pull
 
 ---
 
