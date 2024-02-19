@@ -28,4 +28,5 @@ function FindUniqueCharacter(){
 	}
 }
 
+//Print the result
 console.log('First unique character: ',FindUniqueCharacter())
