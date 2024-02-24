@@ -1,4 +1,8 @@
 /*
+Ricardo Calvo - A01028889
+
+19/02/2024
+
 Write a fucntion that finds the first character of a string that doesn´t repite. Try your function with: 'abacddbec'Escribe una función que encuentre el primer carácter de un cadena de texto que no se repite. Prueba tu función con: 'abacddbec'
 */
 
