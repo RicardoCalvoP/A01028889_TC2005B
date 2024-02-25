@@ -6,3 +6,15 @@ Write a function that takes a list of text strings as a parameter, and returns t
 */
 
 let list = ['this', 'is', 'a', 'string']
+
+function ShortestString(list){
+	let length = list[0].length
+	for(let i = 0; i < list.length - 1; i++){
+		if(list[i].length < length){
+			length = list[i].length
+		}
+	}
+	console.log('The length of the shortest string is: ', length)
+}
+
+ShortestString(list)
