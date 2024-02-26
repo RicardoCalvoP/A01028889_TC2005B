@@ -7,11 +7,9 @@ Write a function that receives a string and returns a new one with the first let
 
 let OriginalString = 'this is a string'
 
-function Capitalized(string)
-{
+function Capitalized(string) {
 	let word = string.split(' ')
-	for(let i = 0; i < word.length; i++)
-	{
+	for (let i = 0; i < word.length; i++) {
 		word[i] = word[i].charAt(0).toUpperCase() + word[i].slice(1).toLowerCase()
 	}
 	console.log(word.join(' '))

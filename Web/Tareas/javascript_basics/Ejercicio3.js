@@ -14,13 +14,8 @@ let array = [1, 2, 3, 4, 5]
 
 function InvertArray(array) {
 	console.log('Original Array: ', array)
-
-	//Length of the first array
 	let length = array.length - 1
-	//Create new Inverted Array
 	let EmptyArray = []
-
-	//Function to add values to empty array
 	for (let i = length; i >= 0; i--) {
 		EmptyArray.push(array[i])
 	}
