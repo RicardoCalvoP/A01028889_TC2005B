@@ -14,12 +14,12 @@ public class Simon_GameController : MonoBehaviour
 
     public TMP_Text StreakText;
     public List<int> User_List = new List<int>();
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        StreakText.text = "Press spacebar to start";    
-       Create = GetComponent<Simon_CreationOrder>();
+        StreakText.text = "Press spacebar to start";
+        Create = GetComponent<Simon_CreationOrder>();
     }
 
     // Update is called once per frame
@@ -28,28 +28,19 @@ public class Simon_GameController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             StartGame();
-        } 
+        }
     }
 
-    public void StartGame(){
+    public void StartGame()
+    {
         StreakText.text = "Streak: " + streak.ToString();
         Create.CreateOrder();
-        
+
     }
 
-    public void ButtonPress1(){
-        User_List.Add(0);
+    public void ButtonPress(int choice)
+    {
+        User_List.Add(choice);
     }
 
-    public void ButtonPress2(){
-        User_List.Add(1);
-    }
-
-    public void ButtonPress3(){
-        User_List.Add(2);
-    }
-
-    public void ButtonPress4(){
-        User_List.Add(3);
-    }
 }
