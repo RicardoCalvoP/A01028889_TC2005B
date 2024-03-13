@@ -10,15 +10,22 @@ using UnityEngine.UI;
 public class Simon_Buttons : MonoBehaviour
 {
     Color originalColor;
+    AudioSource audioSource;
 
-    void Start(){
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        originalColor = GetComponent<Image>().color;
     }
 
-    public void Highlight(){
+    public void Highlight()
+    {
+        audioSource.Play();
         StartCoroutine(ChangeColor());
     }
 
-    IEnumerator ChangeColor(){
+    IEnumerator ChangeColor()
+    {
         originalColor = GetComponent<Image>().color;
         GetComponent<Image>().color = Color.white;
         yield return new WaitForSeconds(0.75f);

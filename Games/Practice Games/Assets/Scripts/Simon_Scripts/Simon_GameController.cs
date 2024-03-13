@@ -23,10 +23,21 @@ public class Simon_GameController : MonoBehaviour
     private int index;
     private bool playerTurn; // if true, then is player turn, else, cpu will add to pattern
 
+    /*
+    -------
+    AUDIO
+    -------
+    */
+
+    public AudioClip lose;
+    AudioSource audioSource;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         playerTurn = false;
         StartGame();
     }
@@ -66,6 +77,7 @@ public class Simon_GameController : MonoBehaviour
     {
         if (playerTurn)
         {
+            buttons[choice].GetComponent<Simon_Buttons>().Highlight();
             if (CPU_LIST[index] == choice)
             {
                 User_List.Add(choice);
@@ -81,6 +93,7 @@ public class Simon_GameController : MonoBehaviour
             }
             else
             {
+                audioSource.PlayOneShot(lose);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             }
         }
