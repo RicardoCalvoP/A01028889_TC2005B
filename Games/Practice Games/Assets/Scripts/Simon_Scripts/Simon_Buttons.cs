@@ -30,7 +30,7 @@ public class Simon_Buttons : MonoBehaviour
         Color newColor = originalColor;
         newColor.a = 1f;
         GetComponent<Image>().color = newColor;
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(0.45f);
 
         // Cambiar la transparencia a 0.25 (un valor arbitrario)
         newColor.a = 0.25f;

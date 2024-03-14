@@ -18,10 +18,12 @@ using TMPro;
 public class Simon_Menu : MonoBehaviour
 {
     public TMP_Text StartText; //Text shown on the screen to start the game and text for showing the current score
-
+    public TMP_Text BestScoreText;
     void Start()
     {
+        int best_streak = PlayerPrefs.GetInt("record", 0);
         StartText.text = "Press spacebar to start";
+        BestScoreText.text = "Best score: " + best_streak.ToString();
     }
 
     void Update()

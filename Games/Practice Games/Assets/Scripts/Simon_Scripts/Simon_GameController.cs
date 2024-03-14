@@ -14,10 +14,12 @@ using TMPro;
 public class Simon_GameController : MonoBehaviour
 {
     public TMP_Text StreakText; //Text shown on the screen to start the game and text for showing the current score
+    public TMP_Text BestStreakText;
     public GameObject[] buttons; //List of objects buttons
     public List<int> User_List = new List<int>(); //List of numbers gathered from the buttons pressed by the player
     public List<int> CPU_LIST = new List<int>(); // List of numbers created randomly by the cpu
     public int streak; // score of the current game
+    public int best_streak;
     private int random_button;
     private int length;
     private int index;
@@ -28,9 +30,10 @@ public class Simon_GameController : MonoBehaviour
     AUDIO
     -------
     */
+    public AudioSource audioSource;
 
     public AudioClip Lose;
-    AudioSource audioSource;
+    //public AudioClip Win;
 
 
 
@@ -38,6 +41,7 @@ public class Simon_GameController : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        best_streak = PlayerPrefs.GetInt("record", 0);
         playerTurn = false;
         StartGame();
     }
@@ -47,12 +51,12 @@ public class Simon_GameController : MonoBehaviour
     void Update()
     {
         StreakText.text = "Streak: " + streak.ToString();
+        BestStreakText.text = "Best score: " + best_streak.ToString();
     }
 
 
     public void StartGame()
     {
-        StreakText.text = "Streak: " + streak.ToString();
         StartCoroutine(CPU_ORDER());
     }
 
@@ -68,7 +72,7 @@ public class Simon_GameController : MonoBehaviour
         {
             random_button = CPU_LIST[i];
             buttons[random_button].GetComponent<Simon_Buttons>().Highlight();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
         }
         playerTurn = true;
         index = 0;
@@ -77,22 +81,30 @@ public class Simon_GameController : MonoBehaviour
     {
         if (playerTurn)
         {
-            buttons[choice].GetComponent<Simon_Buttons>().HighlightPressed();
             if (CPU_LIST[index] == choice)
             {
                 User_List.Add(choice);
                 index++;
+                buttons[choice].GetComponent<Simon_Buttons>().HighlightPressed();
 
                 if (index == length)
                 {
                     streak++;
+                    if (streak > best_streak)
+                    {
+                        best_streak = streak;
+                        PlayerPrefs.SetInt("record", best_streak);
+                        audioSource = BestStreakText.GetComponent<AudioSource>();
+                        audioSource.Play();
+                    }
                     playerTurn = false;
                     StartCoroutine(CPU_ORDER());
                 }
             }
             else
             {
-                audioSource.Play(Lose);
+                audioSource = StreakText.GetComponent<AudioSource>();
+                audioSource.Play();
                 StartCoroutine(LoadSceneAfterDelay(Lose.length));
             }
         }
