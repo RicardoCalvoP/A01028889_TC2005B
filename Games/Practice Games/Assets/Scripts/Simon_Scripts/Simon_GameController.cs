@@ -29,7 +29,7 @@ public class Simon_GameController : MonoBehaviour
     -------
     */
 
-    public AudioClip lose;
+    public AudioClip Lose;
     AudioSource audioSource;
 
 
@@ -47,7 +47,6 @@ public class Simon_GameController : MonoBehaviour
     void Update()
     {
         StreakText.text = "Streak: " + streak.ToString();
-        Debug.Log(CPU_LIST[index]);
     }
 
 
@@ -72,12 +71,13 @@ public class Simon_GameController : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
         playerTurn = true;
+        index = 0;
     }
     public void ButtonPress(int choice)
     {
         if (playerTurn)
         {
-            buttons[choice].GetComponent<Simon_Buttons>().Highlight();
+            buttons[choice].GetComponent<Simon_Buttons>().HighlightPressed();
             if (CPU_LIST[index] == choice)
             {
                 User_List.Add(choice);
@@ -87,15 +87,20 @@ public class Simon_GameController : MonoBehaviour
                 {
                     streak++;
                     playerTurn = false;
-                    index = 0;
                     StartCoroutine(CPU_ORDER());
                 }
             }
             else
             {
-                audioSource.PlayOneShot(lose);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                audioSource.Play(Lose);
+                StartCoroutine(LoadSceneAfterDelay(Lose.length));
             }
         }
     }
+    IEnumerator LoadSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
 }

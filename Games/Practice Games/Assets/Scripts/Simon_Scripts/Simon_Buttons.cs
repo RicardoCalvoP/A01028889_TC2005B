@@ -26,10 +26,32 @@ public class Simon_Buttons : MonoBehaviour
 
     IEnumerator ChangeColor()
     {
-        originalColor = GetComponent<Image>().color;
-        GetComponent<Image>().color = Color.white;
+        // Cambiar la transparencia a completamente opaco
+        Color newColor = originalColor;
+        newColor.a = 1f;
+        GetComponent<Image>().color = newColor;
         yield return new WaitForSeconds(0.75f);
-        GetComponent<Image>().color = originalColor;
+
+        // Cambiar la transparencia a 0.25 (un valor arbitrario)
+        newColor.a = 0.25f;
+        GetComponent<Image>().color = newColor;
+
+    }
+    public void HighlightPressed()
+    {
+        audioSource.Play();
+        StartCoroutine(ChangeColorPressed());
+    }
+
+    IEnumerator ChangeColorPressed()
+    {
+        Color newColor = originalColor;
+        newColor.a = 1f;
+        GetComponent<Image>().color = newColor;
+        yield return new WaitForSeconds(0.1f);
+
+        newColor.a = 0.25f;
+        GetComponent<Image>().color = newColor;
 
     }
 }
