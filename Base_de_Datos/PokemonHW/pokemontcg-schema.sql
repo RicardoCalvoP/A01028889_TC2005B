@@ -32,11 +32,11 @@ USE pokemontcg;
 
 CREATE TABLE card (
     card_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
-    name VARCHAR(45) NOT NULL,
     type VARCHAR(45) NOT NULL,
+    name VARCHAR(45) NOT NULL,
     stage VARCHAR(45) DEFAULT NULL,
     health VARCHAR(45),
-    element SMALLINT UNSIGNED,
+    element VARCHAR(45),
     evolves_from VARCHAR(45),
     first_attack VARCHAR(90),
     first_attack_effect VARCHAR(300),
@@ -60,7 +60,7 @@ CREATE TABLE card (
 
 CREATE TABLE player (
     player_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
-    name VARCHAR(45) NOT NULL,
+    username VARCHAR(45) NOT NULL,
     description VARCHAR(180) DEFAULT NULL,
     level SMALLINT DEFAULT 1 NOT NULL,
     password VARCHAR(45) NOT NULL,
