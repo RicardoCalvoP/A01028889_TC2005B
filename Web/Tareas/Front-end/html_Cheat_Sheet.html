@@ -9,14 +9,15 @@
 
 <body>
     <div class="Title">
-        <h1>Html Cheat Sheet</h1>
+        <header>
+            <h1>Html Cheat Sheet</h1>
+            <p>Ricardo Calvo Pérez - A01028889</h5>
+        </header>
     </div>
-    <h5>Ricardo Calvo Pérez - A01028889</h5>
-    <p>In this html page, we are going to review some of
-        html´s tags, such as:</p>
 
     <div class="Index">
         <section id="Index">
+            <h2>INDEX</h2>
             <ul>
                 <nav>
                     <li><a href="#Anchor">Anchor</a></li>
@@ -334,7 +335,7 @@
 
                 <h3>HTML Code</h3>
                 <p>
-                    This is a normal text | "&lt;b&gt;This is a bold text&lt;/b&gt;"
+                    This is a normal text | &lt;b&gt;This is a bold text&lt;/b&gt;
                 </p>
             </section>
         </div>
@@ -345,7 +346,18 @@
                 <p>
                     The strike tag is used to draw a horizontal line through text, typically to indicate a deletion or
                     strikeout.
+                    <br>
+                    The &lt;strike&gt; &lt;/strike&gt; tag is unable in HTML 5;
+                    use instead &lt;s&gt; &lt;/s&gt; for same results
                 </p>
+
+                <h3>Example</h3>
+                <p>
+                    <s>This sentence is strikeout</s>
+                </p>
+
+                <h3>HTML Code</h3>
+                &lt;s&gt;This sentence is strikeout&lt;/s&gt;
             </section>
         </div>
 
@@ -353,8 +365,15 @@
             <section id="small">
                 <h2>Small</h2>
                 <p>
-                    The small tag is used to represent small print or fine print.
+                    The small tag is used to represent small print or fine print. Normally
+                    we use small tag to write copyright text or side-comments
                 </p>
+
+                <h3>Example</h3>
+                <p>Normal text |<small> This text is in small tags</small></p>
+
+                <h3>HTML Code</h3>
+                <p>Normal text |&lt;small&gt;This text is in small tags&lt;/small&gt </p>
             </section>
         </div>
 
@@ -364,6 +383,16 @@
                 <p>
                     The emphasized tag is used to emphasize text, typically displayed in italic.
                 </p>
+
+                <h3>Example</h3>
+                <p>
+                    You <em>can</em> differentiate the emphasized word.
+                </p>
+
+                <h3>HTML Code</h3>
+                <p>
+                    You &lt;em&gt;can&lt;em&gt;differentiate the emphasized word.
+                </p>
             </section>
         </div>
 
@@ -371,8 +400,31 @@
             <section id="header">
                 <h2>Header</h2>
                 <p>
-                    The header tag is used to define a header for a document or a section.
+                    The header tag is used to represent a container for a introduction
+                    where you can Normally find H1 to H2, logo, authorship, etc.
+                    <br>
+                    You can have more than one header tag, the only restrictions, you
+                    can't place a header tag inside a footer, address, or another header tag.
                 </p>
+                <h3>Example</h3>
+                <p>
+                <header>
+                    <h1>This is a h1 inside a header</h1>
+                    <p>This text created by Rick is inside a header</p>
+                </header>
+                </p>
+
+                <h3>HTML Code</h3>
+                <p>
+                    &lt;header&gt;
+                    <br>
+                    &lt;h1&gt;This is a h1 inside a header&lt;/h1&gt;
+                    <br>
+                    &lt;p&gt;This text created by Rick is inside a header&lt;/p&gt;
+                    <br>
+                    &lt;/header&gt;
+                </p>
+
             </section>
         </div>
 
@@ -381,9 +433,27 @@
                 <h2>Section</h2>
                 <p>
                     The section tag is used to define sections in a document, such as chapters, headers, footers, or any
-                    other
-                    sections of the document.
+                    other sections of the document.
+                    <br>
+                    You can add an <i>id</i> attribute to interact later on with the
+                    section and differentiate one section from another
                 </p>
+
+                <h3>Example</h3>
+                <Section id="Example">
+                    <p>
+                        This text is inside a section with id = Example
+                    </p>
+                </Section>
+
+                <h3>HTML Code</h3>
+                &lt;Section id="Example"&gt;
+                <br>
+                &lt;p&gt;
+                This text is inside a section with id = Example
+                &lt;/p&gt;
+                <br>
+                &lt;/Section&gt;
             </section>
         </div>
 
@@ -392,8 +462,33 @@
                 <h2>Article</h2>
                 <p>
                     The article tag is used to define independent, self-contained content that could be distributed and
-                    reused
-                    independently.
+                    reused independently.
+                    <br>
+                    It doesn't affect directly to the html but you can style it
+                    with <i>css</i> code.
+                </p>
+                <h3>Example</h3>
+                <p>
+                <Article>
+                    <h4>Article Example</h4>
+                    <p>
+                        This text is inside an article tag
+                    </p>
+                </Article>
+                </p>
+                <h3>HTML Code</h3>
+                <p>
+                    &lt;Article&gt;
+                    <br>
+                    &lt;h4&gt;
+                    Article Example
+                    &lt;/h4&gt;
+                    <br>
+                    &lt;p&gt;
+                    This text is inside an article tag
+                    &lt;/p&gt;
+                    <br>
+                    &lt;/Article&gt;
                 </p>
             </section>
         </div>
@@ -403,8 +498,39 @@
                 <h2>Aside</h2>
                 <p>
                     The aside tag is used to define content aside from the content it is placed in, often represented as
-                    a
-                    sidebar or a pull-quote.
+                    a sidebar or a pull-quote. Just as the last tag, the Aside
+                    tag doesn't render as something special in html, but you can style
+                    it later with <i>css</i> code.
+                </p>
+
+                <h3>Example</h3>
+                <p>This a normal text in a paragraph</p>
+                <aside>
+                    <h4>Aside Text</h4>
+                    <p>
+                        This text is inside an aside tag and it adds spaces
+                        between each tag automatically.
+                    </p>
+                </aside>
+
+                <h3>HTML Code</h3>
+                <p>
+                    &lt;p&gt;
+                    This is a normal text in a paragraph.
+                    &lt;/p&gt;
+                    <br>
+                    &lt;Aside&gt;
+                    <br>
+                    &lt;h4&gt;
+                    Aside Text
+                    &lt;/h4&gt;
+                    <br>
+                    &lt;p&gt;
+                    This is inside a side an aside tag and it adds spaces
+                    between each tag automatically.
+                    &lt;/p&gt;
+                    <br>
+                    &lt;/Aside&gt;
                 </p>
             </section>
         </div>
@@ -413,7 +539,37 @@
             <section id="footer">
                 <h2>Footer</h2>
                 <p>
-                    The footer tag is used to define a footer for a document or a section.
+                    Similar to the header tag, the footer tag defines a footer in
+                    a document or section, also you can have multiple footer tags
+                    in the same document.
+                    <br>
+                    The footer tag Normally contains authorship, copyright, contact
+                    information, sitemap, top links, related documents, etc.
+                </p>
+
+                <h3>Example</h3>
+                <footer>
+                    <p>This text is inside a footer tag</p>
+                    <p><a href="#Index">Click here to go back to index</a></p>
+                </footer>
+
+                <H3>HTML Code</H3>
+                <p>
+                    &lt;footer&gt;
+                    <br>
+                    &lt;p&gt;
+                    <br>
+                    This text is inside a footer tag
+                    <br>
+                    &lt;/p&gt;
+                    <br>
+                    &lt;p&gt;
+                    &lt;a href="#Index"&gt;
+                    Click here to go back to index
+                    &lt;/a&gt;
+                    &lt;/p&gt;
+                    <br>
+                    &lt;/footer&gt;
                 </p>
             </section>
         </div>
@@ -422,19 +578,61 @@
             <section id="navigation">
                 <h2>Navigation</h2>
                 <p>
-                    The navigation tag is used to define a set of navigation links.
+                    The navigation tag is used to define a set of navigation links. Not all links
+                    need to be inside a nav tag, but it is usually used only for a major block
+                    of navigation links.
+                </p>
+
+                <h3>Example</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#Index">Index</a></li>
+                        <li><a href="#navigation">Navigation</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <h3>HTML Code</h3>
+                <p>
+                    &lt;nav&gt;
+                    <br>
+                    &lt;ul&gt;
+                    <br>
+                    &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    <br>
+                    &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                    <br>
+                    &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                    <br>
+                    &lt;/ul&gt;
+                    <br>
+                    &lt;/nav&gt;
                 </p>
             </section>
         </div>
+
 
         <div class="Image_tag">
             <section id="image">
                 <h2>Image</h2>
                 <p>
-                    The image tag is used to embed images in an HTML document.
+                    The image tag is used to embed images in an HTML document. You can use
+                    either an image from a local folder or from a link from internet.
+                </p>
+
+                <h3>Example</h3>
+                <img src="https://i0.wp.com/gershenson.mx/wp-content/uploads/2020/08/logo-tec-de-monterrey-e1484853084274.png?ssl=1"
+                    alt="Example Image">
+
+                <h3>HTML Code</h3>
+                <p>
+                    &lt;img
+                    src="https://i0.wp.com/gershenson.mx/wp-content/uploads/2020/08/logo-tec-de-monterrey-e1484853084274.png?ssl=1"
+                    alt="Example Image"&gt;
                 </p>
             </section>
         </div>
+
 
         <div class="Break_tag">
             <section id="break">
