@@ -5,20 +5,94 @@ body {
 
 header {
     display: flex;
-    background-color: #263238;
+    background-color: rgb(37, 64, 75);
     ;
 }
 
-div.main {
-    margin: 0;
+.main {
     display: flex;
-    background-color: goldenrod;
+    background-color: rgb(185, 125, 45);
+    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.main p {
+    max-width: 60%;
+}
+
+.main h1 {
+    font-weight: Bold;
+}
+
+.Content {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.Content-box {
+    display: flex;
+    flex-direction: column;
+    /* Arrange content vertically */
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    width: 33%;
+    height: 125px;
+    color: black;
+}
+
+.Content-box img {
+    width: 150px;
+    height: 150px;
+}
+
+
+.Mid_footer {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute items evenly along the main axis */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(37, 64, 75);
+    height: 75px;
+}
+
+.Mid_footer form {
+    display: flex;
+    align-items: center;
+    ;
+}
+
+.Mid_footer p {
+    padding-right: 100px;
+    font-weight: bold;
+}
+
+.Mid_footer input[type="email"] {
+    width: 200px;
+    padding: 5px;
+    /* Add margin to separate input and button */
+}
+
+.Mid_footer button {
+    padding: 5px 10px;
+    background-color: rgb(168, 106, 24);
+    margin-left: 10px;
+    color: white;
+    cursor: pointer;
+    border: 10px;
+}
+
 
 footer {
-    background-color: #263238;
-}
+    width: 100%;
+    background-color: rgb(37, 64, 75);
+    text-align: center;
 
-div.Mid_footer {
-    margin: 0;
 }
